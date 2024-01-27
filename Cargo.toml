@@ -20,9 +20,9 @@ ark-ec = { version = "0.4.0", default-features = false }
 ark-serialize = { version = "0.4.0", default-features = false, features = [ "derive" ] }
 ark-poly = { version = "0.4.0", default-features = false }
 ark-std = { version = "0.4.0", default-features = false }
-ark-relations = { version = "0.4.0", default-features = false }
-ark-crypto-primitives = { version = "0.4.0", default-features = false, features = ["snark"] }
-ark-r1cs-std = { version = "0.4.0", default-features = false, optional = true }
+ark-relations = { git = "https://github.com/zkHubHQ/snark.git", default-features = false, branch = "distributed-groth16" }
+ark-crypto-primitives = { git = "https://github.com/zkHubHQ/crypto-primitives.git", default-features = false, branch = "distributed-groth16", features = ["snark"] }
+ark-r1cs-std = { git = "https://github.com/zkHubHQ/r1cs-std.git", default-features = false, optional = true, branch = "distributed-groth16" }
 
 tracing = { version = "0.1", default-features = false, features = [ "attributes" ], optional = true }
 derivative = { version = "2.0", features = ["use_core"], optional = true}
@@ -38,7 +38,7 @@ ark-mnt4-298 = { version = "0.4.0", default-features = false, features = ["r1cs"
 ark-mnt6-298 = { version = "0.4.0", default-features = false, features = ["r1cs"] }
 ark-mnt4-753 = { version = "0.4.0", default-features = false, features = ["r1cs", "curve"] }
 ark-mnt6-753 = { version = "0.4.0", default-features = false, features = ["r1cs"] }
-ark-r1cs-std = { version = "0.4.0", default-features = false }
+ark-r1cs-std = { git = "https://github.com/zkHubHQ/r1cs-std.git", default-features = false, branch = "distributed-groth16" }
 
 [features]
 default = ["parallel"]
